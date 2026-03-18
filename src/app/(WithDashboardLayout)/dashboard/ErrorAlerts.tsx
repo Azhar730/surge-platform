@@ -10,7 +10,6 @@ export interface ErrorAlert {
 interface ErrorAlertsProps {
   alerts: ErrorAlert[];
 }
-
 export function ErrorAlerts({ alerts }: ErrorAlertsProps) {
   if (!alerts.length) return null;
 
