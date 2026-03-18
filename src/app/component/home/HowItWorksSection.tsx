@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Check, Loader } from "lucide-react";
-import Badge from "./BadgeButton";
+import BadgeButton from "../shared/BadgeButton";
 
 const steps = [
   {
@@ -92,7 +92,7 @@ export default function HowItWorksSection() {
           viewport={{ once: true, amount: 0.35 }}
           className="mx-auto max-w-2xl text-center mb-12"
         >
-          <Badge text="How it works" />
+          <BadgeButton text="How it works" />
           <h2 className="text-4xl font-bold tracking-tight text-slate-900 mt-3">
             Three Simple Steps To
             <br />

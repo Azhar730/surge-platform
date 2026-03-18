@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
-import BadgeButton from "./BadgeButton";
+import BadgeButton from "../shared/BadgeButton";
 
 const plans = [
   {

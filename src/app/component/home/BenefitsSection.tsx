@@ -1,8 +1,7 @@
 import { Clock, CalendarCheck, Sparkles, Settings, TrendingUp, LayoutDashboard } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@base-ui/react";
-import Badge from "./BadgeButton";
+import BadgeButton from "../shared/BadgeButton";
 
 const benefits = [
   {
@@ -48,7 +47,7 @@ export default function BenefitsSection() {
           viewport={{ once: true, amount: 0.35 }}
           className="mx-auto max-w-2xl text-center mb-12"
         >
-        <Badge text="Benefits" />
+        <BadgeButton text="Benefits" />
 
           <h2 className="text-4xl font-bold tracking-tight text-slate-900">
             Content Publishing Fully

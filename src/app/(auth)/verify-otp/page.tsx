@@ -1,8 +1,8 @@
 "use client";
 
-import AppButton from "@/app/component/AppButton";
-import OtpInput from "@/app/component/OtpInput";
-import ZerodraftLogo from "@/app/component/ZeroDraftLogo";
+import AppButton from "@/app/component/shared/AppButton";
+import OtpInput from "@/app/component/auth/OtpInput";
+import ZerodraftLogo from "@/app/component/shared/ZeroDraftLogo";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 

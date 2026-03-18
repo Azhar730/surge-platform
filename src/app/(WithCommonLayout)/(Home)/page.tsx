@@ -6,13 +6,15 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import HeroSection from "./component/HeroSection";
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import BenefitsSection from "./component/BenefitsSection";
-import Badge from "./component/BadgeButton";
-import HowItWorksSection from "./component/HowItWorksSection";
-import IntegrationsSection from "./component/IntegrationsSection";
-import PricingSection from "./component/PricingSection";
+import Badge from "../../component/shared/BadgeButton";
+import IntegrationsSection from "../../component/home/IntegrationsSection";
+import FAQSection from "../../component/home/FAQSection";
+import BenefitsSection from "@/app/component/home/BenefitsSection";
+import HeroSection from "@/app/component/home/HeroSection";
+import HowItWorksSection from "@/app/component/home/HowItWorksSection";
+import PricingSection from "@/app/component/home/PricingSection";
+import CTASection from "@/app/component/home/CTASection";
 
 const integrations = ["Semrush", "WordPress", "Webflow", "Google Docs", "Notion", "HubSpot"];
 
@@ -166,8 +168,10 @@ function App() {
         </section>
         <BenefitsSection />
         <HowItWorksSection />
-        <IntegrationsSection/>
-        <PricingSection/>
+        <IntegrationsSection />
+        <PricingSection />
+        <FAQSection />
+        <CTASection/>
 
         <section id="faq" className="border-b border-zinc-200 py-20">
           <div className="mx-auto max-w-3xl px-6">
