@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -74,9 +73,11 @@ function App() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
+          <Link href={"/onboarding"}>
           <Button className="hidden sm:inline-flex bg-blue-600 hover:bg-blue-700 rounded cursor-pointer ">
             Get Started
           </Button>
+          </Link>
         </div>
       </header>
 
