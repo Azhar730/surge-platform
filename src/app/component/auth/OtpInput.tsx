@@ -71,7 +71,7 @@ export default function OtpInput({ length = 6, onChange }: Props) {
             inputRefs.current[index] = el;
           }}
           className="h-12 w-12 text-center text-lg font-semibold
-          bg-input/60 border border-border rounded-lg
+          bg-white border border-border rounded-lg
           focus:ring-2 focus:ring-primary"
         />
       ))}

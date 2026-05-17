@@ -1,9 +1,14 @@
 "use client";
 
+import { OnboardingSidebar, Step } from "@/app/component/onboarding/OnboardingSidebar";
+import { StepAddFeeds } from "@/app/component/onboarding/StepAddFeeds";
+import { StepConnectPlatforms } from "@/app/component/onboarding/StepConnectCMS";
+import { StepPreferences } from "@/app/component/onboarding/StepPreferences";
+import { StepSchedule } from "@/app/component/onboarding/StepSchedule";
 import { useState } from "react";
-import { OnboardingSidebar, Step, StepAddFeeds, StepConnectCMS, StepPreferences, StepSchedule } from "@/app/component/onboarding";
 
-const STEP_LABELS = ["Add Feeds", "Preferences", "Connect CMS", "Schedule"];
+
+const STEP_LABELS = ["Add Feeds", "Preferences", "Connect Platforms", "Schedule"];
 
 function buildSteps(currentStep: number): Step[] {
   return STEP_LABELS.map((label, i) => {
@@ -42,7 +47,7 @@ function Onboarding({ onComplete }: OnboardingProps) {
         <div className="flex-1 px-10 py-8">
           {currentStep === 1 && <StepAddFeeds onContinue={next} />}
           {currentStep === 2 && <StepPreferences onContinue={next} />}
-          {currentStep === 3 && <StepConnectCMS onContinue={next} />}
+          {currentStep === 3 && <StepConnectPlatforms onContinue={next} />}
           {currentStep === 4 && <StepSchedule onComplete={handleComplete} />}
         </div>
       </div>

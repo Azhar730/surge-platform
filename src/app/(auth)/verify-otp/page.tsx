@@ -35,7 +35,7 @@ function VerifyOtpPage() {
             Verify
           </AppButton>
           <p className="text-center text-sm text-muted-foreground">
-            Didn't receive code?{" "}
+            Didn&apos;t receive code?{" "}
             <span className="text-primary cursor-pointer hover:underline">
               Resend
             </span>

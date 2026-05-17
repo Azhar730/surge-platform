@@ -54,15 +54,15 @@ export function StepPreferences({ onContinue }: StepPreferencesProps) {
           <Select value={tone} onValueChange={setTone}>
             <SelectTrigger
               className={cn(
-                "h-12 rounded-2xl border-0 bg-white/70 shadow-sm text-sm text-slate-700",
+                "w-full rounded-2xl border-0 bg-white/70 shadow-sm text-sm text-slate-700",
                 "focus:ring-2 focus:ring-indigo-400 focus:ring-offset-0"
               )}
             >
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="rounded-xl border-0 shadow-lg">
+            <SelectContent className="rounded-xl border-0 shadow-lg p-2">
               {TONE_OPTIONS.map((opt) => (
-                <SelectItem key={opt} value={opt} className="text-sm">
+                <SelectItem key={opt} value={opt} className="">
                   {opt}
                 </SelectItem>
               ))}

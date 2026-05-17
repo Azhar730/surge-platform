@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import { SettingsTab, SettingsTabBar } from "../SettingsTabBar";
-import { SettingsRSSFeeds } from "../SettingsRSSFeeds";
-import { SettingsEditorialPreferences } from "../SettingsEditorialPreferences";
 import { SettingsPublishing } from "../SettingsPublishing";
 import { SettingsSchedule } from "../SettingsSchedule";
 import { SettingsBilling } from "../SettingsBilling";
+import { SettingsRSSFeeds } from "../SettingsRSSFeeds";
 
 
 function SettingsPage() {
-  const [activeTab, setActiveTab] = useState<SettingsTab>("rss-feeds");
+  const [activeTab, setActiveTab] = useState<SettingsTab>("profile");
 
   return (
     <div className="flex-1 flex flex-col gap-6 p-8 overflow-auto">
@@ -21,11 +20,8 @@ function SettingsPage() {
       <SettingsTabBar activeTab={activeTab} onChange={setActiveTab} />
 
       <div className="max-w-full w-full">
-        {activeTab === "rss-feeds" && <SettingsRSSFeeds />}
-        {activeTab === "editorial-preferences" && (
-          <SettingsEditorialPreferences />
-        )}
-        {activeTab === "publishing" && <SettingsPublishing />}
+        {activeTab === "profile" && <SettingsRSSFeeds />}
+        {activeTab === "integration" && <SettingsPublishing />}
         {activeTab === "schedule" && <SettingsSchedule />}
         {activeTab === "billing" && <SettingsBilling />}
       </div>

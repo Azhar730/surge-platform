@@ -3,16 +3,14 @@
 import { cn } from "@/lib/utils";
 
 export type SettingsTab =
-  | "rss-feeds"
-  | "editorial-preferences"
-  | "publishing"
+  | "profile"
+  | "integration"
   | "schedule"
   | "billing";
 
 const TABS: { id: SettingsTab; label: string }[] = [
-  { id: "rss-feeds", label: "RSS Feeds" },
-  { id: "editorial-preferences", label: "Editorial Preferences" },
-  { id: "publishing", label: "Publishing" },
+  { id: "profile", label: "Profile" },
+  { id: "integration", label: "Integration" },
   { id: "schedule", label: "Schedule" },
   { id: "billing", label: "Billing" },
 ];

@@ -1,5 +1,4 @@
-import { Check, Loader2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Check, RotateCcw } from "lucide-react";
 
 export type JobStatus = "done" | "running" | "pending";
 
@@ -17,18 +16,16 @@ export function JobLog({ jobs }: JobLogProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
       <h3 className="text-sm font-bold text-slate-800 mb-3">Job Log</h3>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-3">
         {jobs.map((job, i) => (
-          <div key={i} className="flex items-center justify-between gap-3">
-            <span className="text-xs text-slate-400 w-14 shrink-0">
-              {job.time}
-            </span>
-            <span className="text-xs text-slate-700 flex-1">{job.label}</span>
+          <div key={i} className="flex items-center gap-3">
+            <span className="text-xs text-slate-400 w-14 shrink-0">{job.time}</span>
+            <span className="text-sm text-slate-700 flex-1">{job.label}</span>
             {job.status === "done" && (
-              <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+              <Check className="w-4 h-4 text-emerald-500 shrink-0" />
             )}
             {job.status === "running" && (
-              <Loader2 className="w-3.5 h-3.5 text-indigo-400 animate-spin shrink-0" />
+              <RotateCcw className="w-4 h-4 text-slate-400 shrink-0" />
             )}
           </div>
         ))}
