@@ -13,7 +13,7 @@ export function DashboardSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="w-40 shrink-0 flex flex-col gap-6 pt-6 pb-8 px-4 bg-white/30 min-h-screen border-r border-slate-200/60">
+    <aside className="w-64 shrink-0 flex flex-col gap-6 pt-6 pb-8 px-4 bg-white/30 min-h-screen border-r border-slate-200/60">
       {/* Logo */}
       <div className="px-2 mb-2">
         <span className="font-mono text-base font-bold tracking-tighter text-slate-800 select-none">
