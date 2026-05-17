@@ -140,3 +140,23 @@
     @apply font-sans;
   }
 }
+
+@layer components {
+  /* Increase dashboard font-sizes by ~15% without changing global root */
+  .dashboard-scale {
+    font-size: 1.15rem;
+  }
+
+  .dashboard-scale .text-xs { font-size: 0.8625rem; }
+  .dashboard-scale .text-sm { font-size: 1.00625rem; }
+  .dashboard-scale .text-base { font-size: 1.15rem; }
+  .dashboard-scale .text-lg { font-size: 1.29375rem; }
+  .dashboard-scale .text-xl { font-size: 1.4375rem; }
+  .dashboard-scale .text-2xl { font-size: 1.725rem; }
+  .dashboard-scale .text-3xl { font-size: 2.15625rem; }
+
+  /* Ensure buttons/inputs that rely on font-size are slightly larger */
+  .dashboard-scale button, .dashboard-scale input, .dashboard-scale textarea, .dashboard-scale select {
+    font-size: inherit;
+  }
+}
