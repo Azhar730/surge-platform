@@ -26,11 +26,11 @@ export function ErrorAlerts({ alerts }: ErrorAlertsProps) {
             <AlertTriangle className="w-4 h-4 text-orange-500" />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-bold text-slate-800 truncate">{alert.title}</p>
-            <p className="text-xs text-slate-400 mt-0.5">{alert.description}</p>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-base font-bold text-foreground truncate">{alert.title}</p>
+            <p className="text-sm text-muted-foreground mt-0.5">{alert.description}</p>
+            <p className="text-sm text-muted-foreground mt-0.5">
               Retry attempted:{" "}
-              <span className="text-slate-600 font-medium">
+              <span className="text-foreground font-medium">
                 {alert.retryAttempted ? "Yes" : "No"}
               </span>
             </p>

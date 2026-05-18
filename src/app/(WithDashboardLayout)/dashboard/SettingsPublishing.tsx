@@ -26,13 +26,13 @@ export function SettingsPublishing() {
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col gap-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h2 className="text-base font-bold text-slate-800">
+        <h2 className="text-lg font-bold text-foreground">
           WordPress Connection
         </h2>
         <span
           className={cn(
             "flex items-center gap-1.5 text-xs font-semibold",
-            status === "connected" ? "text-emerald-500" : "text-slate-400"
+            status === "connected" ? "text-emerald-500" : "text-muted-foreground"
           )}
         >
           <span
@@ -51,24 +51,24 @@ export function SettingsPublishing() {
 
       {/* Site URL */}
       <div className="flex flex-col gap-1.5">
-        <Label className="text-sm font-medium text-slate-600">Site URL</Label>
+        <Label className="text-sm font-medium text-muted-foreground">Site URL</Label>
         <Input
           value={siteUrl}
           onChange={(e) => setSiteUrl(e.target.value)}
-          className="h-11 rounded-xl border-slate-200 text-sm focus-visible:ring-indigo-400 focus-visible:ring-offset-0"
+          className="h-11 rounded-xl border-slate-200 text-base text-foreground focus-visible:ring-indigo-400 focus-visible:ring-offset-0"
         />
       </div>
 
       {/* Application Token */}
       <div className="flex flex-col gap-1.5">
-        <Label className="text-sm font-medium text-slate-600">
+        <Label className="text-sm font-medium text-muted-foreground">
           Application Token
         </Label>
         <Input
           type="password"
           value={token}
           onChange={(e) => setToken(e.target.value)}
-          className="h-11 rounded-xl border-slate-200 text-sm focus-visible:ring-indigo-400 focus-visible:ring-offset-0"
+          className="h-11 rounded-xl border-slate-200 text-base text-foreground focus-visible:ring-indigo-400 focus-visible:ring-offset-0"
         />
       </div>
 
@@ -77,13 +77,13 @@ export function SettingsPublishing() {
         <button
           onClick={handleTest}
           disabled={status === "testing"}
-          className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+          className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
         >
           {status === "testing" ? "Testing…" : "Test Connection"}
         </button>
         <button
           onClick={handleReconnect}
-          className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+          className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
         >
           Reconnect
         </button>

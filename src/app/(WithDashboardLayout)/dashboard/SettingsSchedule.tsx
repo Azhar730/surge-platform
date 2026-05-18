@@ -30,12 +30,12 @@ export function SettingsSchedule() {
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 flex flex-col gap-6">
-      <h2 className="text-base font-bold text-slate-800">Schedule</h2>
+      <h2 className="text-lg font-bold text-foreground">Schedule</h2>
 
       {/* Publish time + timezone */}
       <div className="grid grid-cols-2 gap-4">
         <div className="flex flex-col gap-1.5">
-          <Label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+          <Label className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
             Publish Time
           </Label>
           <div className="relative flex items-center h-11 border border-slate-200 rounded-xl px-3 bg-white focus-within:ring-2 focus-within:ring-indigo-400 focus-within:ring-offset-0">
@@ -43,25 +43,25 @@ export function SettingsSchedule() {
               type="time"
               value={publishTime}
               onChange={(e) => setPublishTime(e.target.value)}
-              className="text-sm text-slate-700 font-medium bg-transparent outline-none flex-1"
+              className="text-base text-foreground font-medium bg-transparent outline-none flex-1"
             />
           </div>
-          <p className="text-xs text-slate-400">
+          <p className="text-sm text-muted-foreground">
             Runs daily at {publishTime} AM
           </p>
         </div>
 
         <div className="flex flex-col gap-1.5">
-          <Label className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+          <Label className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
             Timezone
           </Label>
           <Select value={timezone} onValueChange={setTimezone}>
-            <SelectTrigger className="h-11 rounded-xl border-slate-200 text-sm text-slate-700 focus:ring-indigo-400 focus:ring-offset-0">
+            <SelectTrigger className="h-11 rounded-xl border-slate-200 text-base text-foreground focus:ring-indigo-400 focus:ring-offset-0">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="rounded-xl border-0 shadow-lg">
               {TIMEZONES.map((tz) => (
-                <SelectItem key={tz} value={tz} className="text-sm">
+                <SelectItem key={tz} value={tz} className="text-base">
                   {tz}
                 </SelectItem>
               ))}
@@ -116,8 +116,8 @@ function ToggleRow({
   return (
     <div className="flex items-center justify-between">
       <div>
-        <p className="text-sm font-semibold text-slate-800">{label}</p>
-        <p className="text-xs text-slate-400 mt-0.5">{description}</p>
+        <p className="text-base font-semibold text-foreground">{label}</p>
+        <p className="text-sm text-muted-foreground mt-0.5">{description}</p>
       </div>
       <Switch
         checked={checked}

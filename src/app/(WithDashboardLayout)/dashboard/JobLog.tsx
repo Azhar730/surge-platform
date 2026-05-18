@@ -15,17 +15,17 @@ interface JobLogProps {
 export function JobLog({ jobs }: JobLogProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-4">
-      <h3 className="text-sm font-bold text-slate-800 mb-3">Job Log</h3>
+      <h3 className="text-base font-bold text-foreground mb-3">Job Log</h3>
       <div className="flex flex-col gap-3">
         {jobs.map((job, i) => (
           <div key={i} className="flex items-center gap-3">
-            <span className="text-xs text-slate-400 w-14 shrink-0">{job.time}</span>
-            <span className="text-sm text-slate-700 flex-1">{job.label}</span>
+            <span className="text-sm text-muted-foreground w-14 shrink-0">{job.time}</span>
+            <span className="text-base text-foreground flex-1">{job.label}</span>
             {job.status === "done" && (
               <Check className="w-4 h-4 text-emerald-500 shrink-0" />
             )}
             {job.status === "running" && (
-              <RotateCcw className="w-4 h-4 text-slate-400 shrink-0" />
+              <RotateCcw className="w-4 h-4 text-muted-foreground shrink-0" />
             )}
           </div>
         ))}

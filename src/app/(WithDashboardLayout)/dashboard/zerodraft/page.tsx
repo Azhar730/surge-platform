@@ -66,12 +66,12 @@ function ZerodraftsPage() {
         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
           {/* Search */}
           <div className="relative flex-1 max-w-xs">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search drafts..."
-              className="w-full pl-9 pr-4 h-9 rounded-xl border border-slate-200 bg-white text-sm text-slate-700 placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-indigo-300"
+              className="w-full pl-9 pr-4 h-9 rounded-xl border border-slate-200 bg-white text-base text-foreground placeholder:text-muted-foreground outline-none focus:ring-2 focus:ring-indigo-300"
             />
           </div>
 
@@ -82,10 +82,10 @@ function ZerodraftsPage() {
                 key={f}
                 onClick={() => setActiveFilter(f)}
                 className={cn(
-                  "px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors",
+                  "px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors",
                   activeFilter === f
                     ? "bg-indigo-600 text-white"
-                    : "text-slate-500 hover:text-slate-700 hover:bg-slate-200"
+                    : "text-muted-foreground hover:text-foreground hover:bg-slate-200"
                 )}
               >
                 {f}
@@ -109,7 +109,7 @@ function ZerodraftsPage() {
           {/* Table header */}
           <div className="hidden sm:grid grid-cols-[1fr_80px_130px_130px_80px] gap-2 px-6 py-3 border-b border-slate-100">
             {["TITLE", "TIME", "PLATFORM", "STATUS", ""].map((h, i) => (
-              <span key={i} className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+              <span key={i} className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
                 {h}
               </span>
             ))}
@@ -128,15 +128,15 @@ function ZerodraftsPage() {
                   className="grid grid-cols-1 sm:grid-cols-[1fr_80px_130px_130px_80px] gap-1 sm:gap-2 items-start sm:items-center px-6 py-4 hover:bg-slate-50/60 transition-colors"
                 >
                   {/* Title */}
-                  <span className="text-sm font-medium text-slate-700 truncate pr-2">
+                  <span className="text-base font-medium text-foreground truncate pr-2">
                     {draft.title}
                   </span>
 
                   {/* Time */}
-                  <span className="text-xs sm:text-sm text-slate-400">{draft.time}</span>
+                  <span className="text-sm text-muted-foreground">{draft.time}</span>
 
                   {/* Platform */}
-                  <span className="text-xs sm:text-sm text-slate-500">{draft.platform}</span>
+                  <span className="text-sm text-muted-foreground">{draft.platform}</span>
 
                   {/* Status badge */}
                   <div>
@@ -154,17 +154,17 @@ function ZerodraftsPage() {
                   <div className="flex items-center gap-2 mt-1 sm:mt-0">
                     <button
                       onClick={() => setPreviewDraft(draft)}
-                      className="text-slate-400 hover:text-indigo-500 transition-colors"
+                      className="text-muted-foreground hover:text-indigo-500 transition-colors"
                     >
                       <Eye className="w-4 h-4" />
                     </button>
                     {(draft.status === "Draft" || draft.status === "Retried") && (
-                      <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                      <button className="text-muted-foreground hover:text-foreground transition-colors">
                         <Pencil className="w-4 h-4" />
                       </button>
                     )}
                     {draft.status === "Failed" && (
-                      <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                      <button className="text-muted-foreground hover:text-foreground transition-colors">
                         <RotateCcw className="w-4 h-4" />
                       </button>
                     )}
@@ -177,15 +177,15 @@ function ZerodraftsPage() {
 
         {/* Pagination */}
         <div className="flex items-center justify-center gap-1 pt-2">
-          {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((page) => (
+            {Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1).map((page) => (
             <button
               key={page}
               onClick={() => setCurrentPage(page)}
               className={cn(
-                "w-8 h-8 rounded-lg text-sm font-semibold transition-colors",
+                "w-8 h-8 rounded-lg text-base font-semibold transition-colors",
                 currentPage === page
                   ? "bg-indigo-600 text-white shadow-sm"
-                  : "text-slate-500 hover:bg-slate-200"
+                  : "text-muted-foreground hover:bg-slate-200"
               )}
             >
               {page}
@@ -208,12 +208,12 @@ function ZerodraftsPage() {
             <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 p-6 flex flex-col gap-4">
               {/* Close */}
               <div className="flex items-start justify-between gap-4">
-                <h2 className="text-lg font-bold text-slate-900 leading-snug">
+                <h2 className="text-2xl font-bold text-foreground leading-snug">
                   {previewDraft.title}
                 </h2>
                 <button
                   onClick={() => setPreviewDraft(null)}
-                  className="shrink-0 text-slate-400 hover:text-slate-600 transition-colors mt-0.5"
+                  className="shrink-0 text-muted-foreground hover:text-foreground transition-colors mt-0.5"
                 >
                   <X className="w-4 h-4" />
                 </button>
@@ -229,13 +229,13 @@ function ZerodraftsPage() {
                 >
                   {previewDraft.status}
                 </span>
-                <span className="text-xs text-slate-400">
+                <span className="text-sm text-muted-foreground">
                   {previewDraft.platform} · {previewDraft.time}
                 </span>
               </div>
 
               {/* Preview text */}
-              <div className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">
+              <div className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">
                 {previewDraft.preview}
               </div>
             </div>

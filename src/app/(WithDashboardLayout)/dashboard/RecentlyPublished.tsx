@@ -25,16 +25,16 @@ const statusStyle: Record<ArticleStatus, string> = {
 export function RecentlyPublished({ articles }: RecentlyPublishedProps) {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-      <h2 className="text-base font-bold text-slate-800 mb-4">
+      <h2 className="text-lg font-bold text-foreground mb-4">
         Recently Published
       </h2>
 
       {/* Table header */}
       <div className="grid grid-cols-[1fr_90px_110px_110px_64px] gap-2 px-2 mb-2">
-        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Title</span>
-        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Time</span>
-        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Source</span>
-        <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">Status</span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Title</span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Time</span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Source</span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Status</span>
         <span />
       </div>
 
@@ -45,9 +45,9 @@ export function RecentlyPublished({ articles }: RecentlyPublishedProps) {
             key={article.id}
             className="grid grid-cols-[1fr_90px_110px_110px_64px] gap-2 items-center px-2 py-3.5 hover:bg-slate-50/60 rounded-lg transition-colors"
           >
-            <span className="text-sm text-slate-700 truncate pr-2">{article.title}</span>
-            <span className="text-sm text-slate-500">{article.time}</span>
-            <span className="text-sm text-slate-500">{article.source}</span>
+            <span className="text-base text-foreground truncate pr-2">{article.title}</span>
+            <span className="text-sm text-muted-foreground">{article.time}</span>
+            <span className="text-sm text-muted-foreground">{article.source}</span>
             <div>
               <span
                 className={cn(
@@ -60,22 +60,22 @@ export function RecentlyPublished({ articles }: RecentlyPublishedProps) {
             </div>
             <div className="flex items-center gap-2">
               {article.status === "Published" && (
-                <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                <button className="text-muted-foreground hover:text-foreground transition-colors">
                   <Eye className="w-4 h-4" />
                 </button>
               )}
               {article.status === "Failed" && (
                 <>
-                  <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                  <button className="text-muted-foreground hover:text-foreground transition-colors">
                     <Eye className="w-4 h-4" />
                   </button>
-                  <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                  <button className="text-muted-foreground hover:text-foreground transition-colors">
                     <RotateCcw className="w-4 h-4" />
                   </button>
                 </>
               )}
               {article.status === "Retried" && (
-                <button className="text-slate-400 hover:text-slate-600 transition-colors">
+                <button className="text-muted-foreground hover:text-foreground transition-colors">
                   <Eye className="w-4 h-4" />
                 </button>
               )}

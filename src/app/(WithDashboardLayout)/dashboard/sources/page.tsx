@@ -101,14 +101,14 @@ function SourcesPage() {
           {/* RSS Feeds header */}
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
-              <h2 className="text-base font-bold text-slate-800">RSS Feeds</h2>
+              <h2 className="text-lg font-bold text-foreground">RSS Feeds</h2>
               <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-600">
                 {PLAN}
               </span>
             </div>
 
             {/* Usage + progress */}
-            <p className="text-xs text-slate-500 font-medium">
+            <p className="text-sm text-muted-foreground font-medium">
               {usedCount} / {MAX_FEEDS} feeds used
             </p>
             <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden max-w-xs">
@@ -137,11 +137,11 @@ function SourcesPage() {
                   />
 
                   <div className="flex flex-col gap-0.5">
-                    <p className="text-sm font-semibold text-slate-800 break-all">
+                    <p className="text-base font-semibold text-foreground break-all">
                       {feed.url}
                     </p>
                     {feed.status === "active" ? (
-                      <p className="text-xs text-slate-400">
+                      <p className="text-sm text-muted-foreground">
                         {feed.checkInterval} · {feed.lastChecked}
                       </p>
                     ) : (
@@ -175,8 +175,8 @@ function SourcesPage() {
                 onKeyDown={handleKeyDown}
                 placeholder="https://example.com/feed"
                 className={cn(
-                  "flex-1 h-11 rounded-xl border bg-white text-sm text-slate-700 shadow-none",
-                  "placeholder:text-slate-400 focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0",
+                  "flex-1 h-11 rounded-xl border bg-white text-base text-foreground shadow-none",
+                  "placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0",
                   error ? "border-red-300" : "border-slate-200"
                 )}
               />

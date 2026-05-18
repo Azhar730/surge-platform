@@ -28,7 +28,7 @@ export function SystemStatusBar({
 
         {/* System Status — slate bg section */}
         <div className="bg-slate-50 px-6 py-5 sm:min-w-[190px] flex flex-col justify-center gap-2">
-          <p className="text-sm font-bold text-slate-800">System Status</p>
+          <p className="text-base font-bold text-foreground">System Status</p>
           <span
             className={cn(
               "inline-block w-fit text-xs font-semibold px-3 py-1 rounded-full",
@@ -48,10 +48,10 @@ export function SystemStatusBar({
               key={stat.label}
               className="flex flex-col items-center justify-center gap-1 px-4 py-5 text-center"
             >
-              <p className="text-xs text-slate-400 font-medium whitespace-nowrap">
+              <p className="text-sm text-muted-foreground font-medium whitespace-nowrap">
                 {stat.label}
               </p>
-              <p className="text-xl sm:text-2xl font-bold text-slate-800 whitespace-nowrap">
+              <p className="text-2xl sm:text-3xl font-bold text-foreground whitespace-nowrap">
                 {stat.value}
               </p>
             </div>

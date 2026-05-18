@@ -80,16 +80,16 @@ function BrandsPage() {
         <form onSubmit={form.handleSubmit(onSubmit)}>
             <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 sm:p-8 flex flex-col gap-6">
               {/* Card subtitle */}
-              <p className="text-sm text-slate-500">
+              <p className="text-base text-muted-foreground">
                 Configure how the AI shapes content for your audience.
               </p>
 
               {/* TARGET AUDIENCE */}
               <div className="flex flex-col gap-1">
-                <Label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Target Audience</Label>
+                <Label className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Target Audience</Label>
                 <Input
                   {...form.register("targetAudience")}
-                  className="h-11 rounded-xl border border-slate-200 bg-white text-sm text-slate-700 shadow-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0"
+                  className="h-11 rounded-xl border border-slate-200 bg-white text-base text-foreground shadow-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0"
                 />
                 {form.formState.errors.targetAudience && (
                   <p className="text-xs text-red-400">{String(form.formState.errors.targetAudience.message)}</p>
@@ -98,10 +98,10 @@ function BrandsPage() {
 
               {/* WRITING TONE */}
               <div className="flex flex-col gap-1">
-                <Label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Writing Tone</Label>
+                <Label className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Writing Tone</Label>
                 <Input
                   {...form.register("writingTone")}
-                  className="h-11 rounded-xl border border-slate-200 bg-white text-sm text-slate-700 shadow-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0"
+                  className="h-11 rounded-xl border border-slate-200 bg-white text-base text-foreground shadow-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-0"
                 />
                 {form.formState.errors.writingTone && (
                   <p className="text-xs text-red-400">{String(form.formState.errors.writingTone.message)}</p>
@@ -110,9 +110,9 @@ function BrandsPage() {
 
               {/* EXCLUDED TOPICS */}
               <div className="flex flex-col gap-2">
-                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
                   Excluded Topics{" "}
-                  <span className="normal-case font-normal text-slate-400 tracking-normal">
+                  <span className="normal-case font-normal text-muted-foreground tracking-normal">
                     (optional)
                   </span>
                 </span>
@@ -143,17 +143,17 @@ function BrandsPage() {
                   ))}
 
                   {/* Inline input */}
-                  <input
+                    <input
                     ref={inputRef}
                     value={topicInput}
                     onChange={(e) => setTopicInput(e.target.value)}
                     onKeyDown={handleTopicKeyDown}
                     onBlur={addTopic}
                     placeholder="Add topic..."
-                    className="flex-1 min-w-25 text-sm text-slate-600 placeholder:text-slate-400 outline-none bg-transparent"
+                    className="flex-1 min-w-25 text-base text-muted-foreground placeholder:text-muted-foreground outline-none bg-transparent"
                   />
                 </div>
-                <p className="text-xs text-slate-400">
+                <p className="text-sm text-muted-foreground">
                   Press Enter or comma to add a topic
                 </p>
               </div>
@@ -162,7 +162,7 @@ function BrandsPage() {
               <div className="flex justify-end pt-2">
                 <Button
                   type="submit"
-                  className="h-10 px-6 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-semibold shadow-md transition-all"
+                  className="h-10 px-6 rounded-2xl bg-indigo-500 hover:bg-indigo-600 text-white text-base font-semibold shadow-md transition-all"
                 >
                   Save Changes
                 </Button>
@@ -181,7 +181,7 @@ function BrandsPage() {
         )}
       >
         <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
-        <span className="text-sm font-semibold text-slate-700">Saved Changes</span>
+        <span className="text-sm font-semibold text-foreground">Saved Changes</span>
       </div>
     </div>
   );

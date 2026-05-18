@@ -28,10 +28,10 @@ export function SettingsTabBar({ activeTab, onChange }: SettingsTabBarProps) {
           key={tab.id}
           onClick={() => onChange(tab.id)}
           className={cn(
-            "px-4 py-1.5 rounded-lg text-sm font-medium transition-all",
+            "px-4 py-1.5 rounded-lg text-base font-medium transition-all",
             activeTab === tab.id
               ? "bg-indigo-500 text-white shadow-sm"
-              : "text-slate-500 hover:text-slate-800 hover:bg-slate-50"
+              : "text-muted-foreground hover:text-foreground hover:bg-slate-50"
           )}
         >
           {tab.label}

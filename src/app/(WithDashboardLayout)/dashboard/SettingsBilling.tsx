@@ -78,15 +78,15 @@ export function SettingsBilling() {
 
       {/* Plan limits */}
       <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 flex flex-col gap-3">
-        <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+        <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
           Plan Limits
         </p>
 
         {/* Feeds usage */}
         <div className="flex items-center justify-between gap-4">
-          <span className="text-sm text-slate-700">Feeds</span>
+          <span className="text-base text-foreground">Feeds</span>
           <div className="flex items-center gap-3">
-            <span className="text-xs text-slate-400">
+            <span className="text-sm text-muted-foreground">
               {feedsUsed}/{feedsMax} used
             </span>
             <div className="w-24 h-1.5 bg-slate-100 rounded-full overflow-hidden">
@@ -100,15 +100,15 @@ export function SettingsBilling() {
 
         {/* Publish frequency */}
         <div className="flex items-center justify-between">
-          <span className="text-sm text-slate-700">Publish Frequency</span>
-          <span className="text-sm text-slate-500 font-medium">Daily</span>
+          <span className="text-base text-foreground">Publish Frequency</span>
+          <span className="text-sm text-muted-foreground font-medium">Daily</span>
         </div>
       </div>
 
       {/* Plans comparison */}
       <div className="flex flex-col gap-3">
         <div className="flex items-center justify-between">
-          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
+          <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
             Plans
           </p>
           {/* Billing cycle toggle */}
@@ -120,8 +120,8 @@ export function SettingsBilling() {
                 className={cn(
                   "px-3 py-1 rounded-full transition-all",
                   cycle === c
-                    ? "bg-slate-800 text-white"
-                    : "text-slate-500 hover:text-slate-800"
+                            ? "bg-slate-800 text-white"
+                            : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {c}
@@ -147,15 +147,15 @@ export function SettingsBilling() {
                 </div>
               )}
               <div>
-                <p className="text-sm font-bold text-slate-800">{plan.name}</p>
-                <p className="text-2xl font-bold text-slate-900 mt-1">
+                <p className="text-base font-bold text-foreground">{plan.name}</p>
+                <p className="text-3xl font-bold text-foreground mt-1">
                   ${cycle === "Annual" ? Math.round(plan.price * 0.8) : plan.price}
-                  <span className="text-xs font-normal text-slate-400"> /mo</span>
+                  <span className="text-sm font-normal text-muted-foreground"> /mo</span>
                 </p>
               </div>
               <ul className="flex flex-col gap-1.5">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-xs text-slate-600">
+                  <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
                     <Check className="w-3 h-3 text-indigo-500 shrink-0" />
                     {f}
                   </li>
@@ -170,7 +170,7 @@ export function SettingsBilling() {
                     ? "border-indigo-200 text-indigo-500 hover:bg-indigo-50"
                     : plan.id === "business"
                     ? "bg-indigo-500 hover:bg-indigo-600 text-white"
-                    : "bg-slate-100 text-slate-600 hover:bg-slate-200 border-0"
+                    : "bg-slate-100 text-muted-foreground hover:bg-slate-200 border-0"
                 )}
               >
                 {plan.current
