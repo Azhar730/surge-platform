@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Eye, RefreshCw, RotateCcw } from "lucide-react";
+import { Eye, RotateCcw } from "lucide-react";
 
 export type ArticleStatus = "Published" | "Failed" | "Retried";
 
@@ -31,10 +31,18 @@ export function RecentlyPublished({ articles }: RecentlyPublishedProps) {
 
       {/* Table header */}
       <div className="grid grid-cols-[1fr_90px_110px_110px_64px] gap-2 px-2 mb-2">
-        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Title</span>
-        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Time</span>
-        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Source</span>
-        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">Status</span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          Title
+        </span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          Time
+        </span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          Source
+        </span>
+        <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+          Status
+        </span>
         <span />
       </div>
 
@@ -45,14 +53,20 @@ export function RecentlyPublished({ articles }: RecentlyPublishedProps) {
             key={article.id}
             className="grid grid-cols-[1fr_90px_110px_110px_64px] gap-2 items-center px-2 py-3.5 hover:bg-slate-50/60 rounded-lg transition-colors"
           >
-            <span className="text-base text-foreground truncate pr-2">{article.title}</span>
-            <span className="text-sm text-muted-foreground">{article.time}</span>
-            <span className="text-sm text-muted-foreground">{article.source}</span>
+            <span className="text-base text-foreground truncate pr-2">
+              {article.title}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              {article.time}
+            </span>
+            <span className="text-sm text-muted-foreground">
+              {article.source}
+            </span>
             <div>
               <span
                 className={cn(
                   "inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full",
-                  statusStyle[article.status]
+                  statusStyle[article.status],
                 )}
               >
                 {article.status}

@@ -19,7 +19,7 @@ export function JobLog({ jobs }: JobLogProps) {
       <div className="flex flex-col gap-3">
         {jobs.map((job, i) => (
           <div key={i} className="flex items-center gap-3">
-            <span className="text-sm text-muted-foreground w-14 shrink-0">{job.time}</span>
+            <span className="text-sm text-muted-foreground w-24 shrink-0">{job.time}</span>
             <span className="text-base text-foreground flex-1">{job.label}</span>
             {job.status === "done" && (
               <Check className="w-4 h-4 text-emerald-500 shrink-0" />

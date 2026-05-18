@@ -36,7 +36,7 @@ export function DashboardSidebar() {
           <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
           <div className="relative w-64 h-full bg-white/95 p-4 border-r border-slate-200/60">
             <div className="px-2 mb-2 flex items-center justify-between">
-              <span className="font-mono text-base font-bold tracking-tighter text-foreground select-none">zerodraft.</span>
+              <span className="font-mono text-lg font-bold tracking-tighter text-foreground select-none">zerodraft.</span>
               <button aria-label="Close menu" onClick={() => setOpen(false)} className="p-1">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-foreground" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -57,7 +57,7 @@ export function DashboardSidebar() {
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className={cn(
-                      "px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                      "px-3 py-2 rounded-lg text-base font-medium transition-colors",
                       isActive
                             ? "bg-indigo-500 text-white"
                             : "text-muted-foreground hover:bg-slate-100"
@@ -80,7 +80,7 @@ export function DashboardSidebar() {
       <aside className="hidden md:flex w-64 shrink-0 flex-col gap-6 pt-6 pb-8 px-4 bg-white/30 min-h-screen border-r border-slate-200/60">
         {/* Logo */}
         <div className="px-2 mb-2">
-          <span className="font-mono text-base font-bold tracking-tighter text-foreground select-none">zerodraft.</span>
+          <span className="font-mono text-lg font-bold tracking-tighter text-foreground select-none">zerodraft.</span>
         </div>
 
         {/* Nav */}
@@ -96,7 +96,7 @@ export function DashboardSidebar() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "px-3 py-2 rounded-lg text-sm font-medium transition-colors",
+                  "px-3 py-2 rounded-lg text-base font-medium transition-colors",
                   isActive ? "bg-indigo-500 text-white" : "text-muted-foreground hover:bg-slate-100"
                 )}
               >
@@ -106,8 +106,8 @@ export function DashboardSidebar() {
           })}
         </nav>
 
-        <div className="mt-auto">
-          <button className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">Log out</button>
+          <div className="mt-auto">
+          <button className="px-3 py-2 text-base text-muted-foreground hover:text-foreground transition-colors">Log out</button>
         </div>
       </aside>
     </>
