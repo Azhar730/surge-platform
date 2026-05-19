@@ -4,8 +4,8 @@ import { useState } from "react";
 import { Trash2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { DashboardHeader } from "../DashboardHeader";
 import { cn } from "@/lib/utils";
+import DashboardHeader from "@/app/component/dashboard/shared/DashboardHeader";
 
 interface Feed {
   id: string;

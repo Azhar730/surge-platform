@@ -55,7 +55,10 @@ export function SettingsSchedule() {
           <Label className="text-[11px] font-semibold text-muted-foreground uppercase tracking-wider">
             Timezone
           </Label>
-          <Select value={timezone} onValueChange={setTimezone}>
+          <Select
+            value={timezone}
+            onValueChange={(value) => setTimezone(value ?? "GMT +6 (Dhaka)")}
+          >
             <SelectTrigger className="h-11 rounded-xl border-slate-200 text-base text-foreground focus:ring-indigo-400 focus:ring-offset-0">
               <SelectValue />
             </SelectTrigger>

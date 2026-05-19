@@ -1,11 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { SettingsTab, SettingsTabBar } from "../SettingsTabBar";
-import { SettingsPublishing } from "../SettingsPublishing";
-import { SettingsSchedule } from "../SettingsSchedule";
-import { SettingsBilling } from "../SettingsBilling";
-import ProfileSettings from "../SettingsRSSFeeds";
+import { SettingsTab, SettingsTabBar } from "../../../component/dashboard/settings/SettingsTabBar";
+import { SettingsPublishing } from "../../../component/dashboard/overview/SettingsPublishing";
+import { SettingsSchedule } from "../../../component/dashboard/settings/SettingsSchedule";
+import { SettingsBilling } from "../../../component/dashboard/settings/SettingsBilling";
+import ProfileSettings from "../../../component/dashboard/settings/SettingsRSSFeeds";
 
 
 function SettingsPage() {

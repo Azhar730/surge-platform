@@ -4,12 +4,12 @@ import { MOCK_DRAFTS } from "@/app/component/dashboard/zerodraft/mock-data";
 import { ITEMS_PER_PAGE } from "@/app/component/dashboard/zerodraft/status-config";
 import { Draft, FilterStatus } from "@/app/component/dashboard/zerodraft/types";
 import { useState, useMemo } from "react";
-import { DashboardHeader } from "../DashboardHeader";
 import { DraftFilters } from "@/app/component/dashboard/zerodraft/DraftFilters";
 import { DraftTable } from "@/app/component/dashboard/zerodraft/DraftTable";
 import { Pagination } from "@/app/component/dashboard/zerodraft/Pagination";
 import { PreviewModal } from "@/app/component/dashboard/zerodraft/PreviewModal";
 import { EditDraftDialog } from "@/app/component/dashboard/zerodraft/EditDraftDialog";
+import DashboardHeader from "@/app/component/dashboard/shared/DashboardHeader";
 
 function ZerodraftsPage() {
   const [drafts, setDrafts]           = useState<Draft[]>(MOCK_DRAFTS);

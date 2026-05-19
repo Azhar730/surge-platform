@@ -52,6 +52,7 @@ export const MOCK_SYSTEM_STATUS: SystemStatusData = {
   publishedLast7d: 12,
 };
 
+
 export const MOCK_TODAYS_THEME: TodaysThemeData = {
   theme: "The Future of Developer Tooling",
   sourced: 8,

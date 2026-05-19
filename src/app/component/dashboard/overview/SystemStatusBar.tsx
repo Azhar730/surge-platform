@@ -57,7 +57,6 @@ export function SystemStatusBar({
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

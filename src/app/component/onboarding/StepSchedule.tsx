@@ -117,7 +117,10 @@ export function StepSchedule({ onComplete }: StepScheduleProps) {
         <div className="flex items-center gap-2 flex-wrap">
           {/* Frequency dropdown — hidden when showing fixed "Monday" (Image 1 state) */}
           {/* Show frequency only when NOT in the "Monday-only" locked weekly state */}
-          <Select value={frequency} onValueChange={setFrequency}>
+          <Select
+            value={frequency}
+            onValueChange={(value) => setFrequency(value ?? "Everyday")}
+          >
             <SelectTrigger className="h-11 w-[120px] rounded-2xl border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-400 focus:ring-offset-0">
               <SelectValue />
             </SelectTrigger>
@@ -130,7 +133,10 @@ export function StepSchedule({ onComplete }: StepScheduleProps) {
 
           {/* Weekday — only when Weekly */}
           {isWeekly && (
-            <Select value={weekday} onValueChange={setWeekday}>
+            <Select
+              value={weekday}
+              onValueChange={(value) => setWeekday(value ?? "Monday")}
+            >
               <SelectTrigger className="h-11 w-[120px] rounded-2xl border border-slate-200 bg-white shadow-sm text-sm font-semibold text-slate-700 focus:ring-2 focus:ring-indigo-400 focus:ring-offset-0">
                 <SelectValue />
               </SelectTrigger>

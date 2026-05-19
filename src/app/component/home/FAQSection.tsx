@@ -25,7 +25,7 @@ export default function FAQSection() {
       </div>
 
       {/* Accordion মূল কন্টেইনার */}
-      <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
+      <Accordion className="w-full" defaultValue={["item-1"]}>
         <AccordionItem value="item-1" className="border-b py-1">
           <AccordionTrigger className="text-left text-lg font-medium hover:no-underline">
             <div className="flex w-full items-center justify-between">

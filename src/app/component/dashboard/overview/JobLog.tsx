@@ -26,7 +26,7 @@ export function JobLog({ jobs }: JobLogProps) {
               className="border-b border-border/40 hover:bg-transparent last:border-b-0"
             >
               {/* Time */}
-              <TableCell className="py-3.5 pl-2 pr-4 w-[400px]">
+              <TableCell className="py-3.5 pl-2 pr-4 w-48">
                 <span className="text-xs font-medium text-indigo-400 whitespace-nowrap">
                   {job.time}
                 </span>

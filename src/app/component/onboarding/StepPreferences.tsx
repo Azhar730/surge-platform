@@ -51,7 +51,10 @@ export function StepPreferences({ onContinue }: StepPreferencesProps) {
           <Label className="text-sm font-medium text-slate-700">
             Tone of Article
           </Label>
-          <Select value={tone} onValueChange={setTone}>
+          <Select
+            value={tone}
+            onValueChange={(value) => setTone(value ?? "Professional & Objective")}
+          >
             <SelectTrigger
               className={cn(
                 "w-full rounded-2xl border-0 bg-white/70 shadow-sm text-sm text-slate-700",

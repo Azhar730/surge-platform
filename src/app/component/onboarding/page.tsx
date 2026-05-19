@@ -1,3 +1,5 @@
+"use client";
+
 import Onboarding from "@/app/(WithCommonLayout)/onboarding/page";
 
 export default function OnboardingPage() {

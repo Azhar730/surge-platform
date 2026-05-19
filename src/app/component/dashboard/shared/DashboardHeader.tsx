@@ -1,3 +1,5 @@
+import { de } from "zod/locales";
+
 interface DashboardHeaderProps {
   title: string;
   subtitle: string;
@@ -5,7 +7,7 @@ interface DashboardHeaderProps {
   userInitials?: string;
 }
 
-export function DashboardHeader({
+function DashboardHeader({
   title,
   subtitle,
   userName = "Emma W.",
@@ -26,3 +28,5 @@ export function DashboardHeader({
     </div>
   );
 }
+
+export default DashboardHeader;

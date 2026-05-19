@@ -16,7 +16,7 @@ export function ErrorAlerts({ alerts }: ErrorAlertsProps) {
         {alerts.map((alert) => (
           <div
             key={alert.id}
-            className="flex items-start gap-3.5 py-4 first:pt-0 last:pb-0"
+            className="flex items-start gap-4 py-4 first:pt-0 last:pb-0"
           >
             {/* Icon */}
             <div className="shrink-0 w-9 h-9 rounded-xl bg-red-100 flex items-center justify-center mt-0.5">

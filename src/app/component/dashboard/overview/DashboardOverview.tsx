@@ -12,7 +12,7 @@ import {
   MOCK_SYSTEM_STATUS,
   MOCK_TODAYS_THEME,
 } from "./mock-data";
-import { DashboardHeader } from "@/app/(WithDashboardLayout)/dashboard/DashboardHeader";
+import DashboardHeader from "../shared/DashboardHeader";
 
 export function DashboardOverview() {
   return (
