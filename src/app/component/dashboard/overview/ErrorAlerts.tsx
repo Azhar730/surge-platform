@@ -11,8 +11,8 @@ export function ErrorAlerts({ alerts }: ErrorAlertsProps) {
   if (!alerts.length) return null;
 
   return (
-    <div className="bg-[#eef0fb] rounded-2xl border border-border/40 p-5">
-      <div className="flex flex-col divide-y divide-border/40">
+    <div className="bg-[#eef0fb] rounded-2xl p-5">
+      <div className="flex flex-col divide-y divide-border/40 bg-white rounded-lg p-4">
         {alerts.map((alert) => (
           <div
             key={alert.id}

@@ -16,7 +16,7 @@ import DashboardHeader from "../shared/DashboardHeader";
 
 export function DashboardOverview() {
   return (
-    <div className="flex-1 flex flex-col bg-muted/40 min-h-screen overflow-auto max-w-full">
+    <div className="flex-1 flex flex-col min-h-screen overflow-auto max-w-full bg-slate-100">
       <DashboardHeader
         title="Dashboard"
         subtitle="Overview of your automation, recent activity, and publishing status."
