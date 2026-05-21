@@ -291,7 +291,7 @@ function ProfileSettings() {
                   control={form.control}
                   name="currentPassword"
                   render={({ field }) => (
-                    <FormItem className="flex flex-col gap-1 space-y-0 max-w-sm">
+                    <FormItem className="flex flex-col gap-1 space-y-0 max-w-full">
                       <FormLabel className="text-sm font-semibold text-muted-foreground">
                         Current Password
                       </FormLabel>
