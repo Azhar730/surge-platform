@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -124,9 +125,9 @@ function ProfileSettings() {
               {/* Avatar row */}
               <div className="flex items-center gap-5 mb-8">
                 {/* Avatar */}
-                <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden shrink-0 border border-slate-100">
+                <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden shrink-0 border border-slate-100 relative">
                   {avatar ? (
-                    <img src={avatar} alt="avatar" className="w-full h-full object-cover" />
+                    <Image src={avatar} alt="avatar" fill className="object-cover" />
                   ) : (
                     <div className="w-full h-full bg-gradient-to-br from-slate-300 to-slate-400 flex items-center justify-center text-white text-xl font-bold">
                       JP
